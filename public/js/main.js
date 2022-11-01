@@ -1,5 +1,8 @@
+// JavaScript
 const btn = document.querySelector("#btn");
-btn.addEventListener("click",myhendler);
+if(btn){
+    btn.addEventListener("click",myhendler);
+}
 
 function myhendler(e){
     e.defaultPrevented;
@@ -15,10 +18,34 @@ function myhendler(e){
             alert(`Готово, получили ${xhr.response.length} байт`); // response -- это ответ сервера
         }
     };
-
     xhr.onerror = function() {
         alert("Запрос не удался");
     };
-
 }
 
+// JQuery
+
+( function( $ ) {
+    $(document).ready(function () {
+
+        $( "#jbtn" ).on( "click", mysend );
+
+        function mysend(e){
+            e.defaultPrevented;
+
+            let formData = new FormData(document.forms.jperson);
+
+            $.ajax({
+                url: '/jend',
+                method: 'post',
+                dataType: 'html',
+                data: formData,
+                success: function(data){
+                    alert(data);
+                }
+            });
+
+        }
+
+    });
+}( jQuery ) );

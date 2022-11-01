@@ -9,15 +9,15 @@
     <title>Document</title>
 </head>
 <body>
-<form name="person" enctype="multipart/form-data" action="" method="post">
+<form name="aperson" enctype="multipart/form-data" action="" method="post">
     @csrf
-    <input type="text" name="name">
-    <input type="submit" id="btn">
+    <input type="text" name="aname">
+    <input type="submit" id="abtn">
 </form>
 @isset($test )
     {{ $test }}
 @endisset
 <script src="{{ asset("js/jquery.min.js") }}"></script>
+<script src="{{ asset("js/axios/dist/axios.min.js") }}"></script>
 <script src="{{ asset("js/main.js") }}"></script>
 </body>
-</html>

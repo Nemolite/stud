@@ -23,10 +23,38 @@ class TestController extends Controller
             ];
         } else {
             $arr = [
-                'test'=>'rrrr'
+                'test'=>'Работает XMLHttpRequest'
             ];
         }
 
         return view('hend',$arr);
+    }
+
+    public function jend(Request  $request){
+        if ($request->isMethod('post')){
+            $arr = [
+                'test'=>$request->jname
+            ];
+        } else {
+            $arr = [
+                'test'=>'Работает JQuery'
+            ];
+        }
+
+        return view('jent',$arr);
+    }
+
+    public function axios(Request  $request){
+        if ($request->isMethod('post')){
+            $arr = [
+                'test'=>$request->aname
+            ];
+        } else {
+            $arr = [
+                'test'=>'Работает axios'
+            ];
+        }
+
+        return view('axios',$arr);
     }
 }

@@ -9,10 +9,10 @@
     <title>Document</title>
 </head>
 <body>
-<form name="person" enctype="multipart/form-data" action="" method="post">
+<form name="jperson" enctype="multipart/form-data" action="" method="post">
     @csrf
-    <input type="text" name="name">
-    <input type="submit" id="btn">
+    <input type="text" name="jname">
+    <input type="submit" id="jbtn">
 </form>
 @isset($test )
     {{ $test }}

@@ -25,6 +25,13 @@ Route::get('/display',[\App\Http\Controllers\TestController::class, 'display'])-
 Route::get('/hend',[\App\Http\Controllers\TestController::class, 'hend']);
 Route::post('/hend',[\App\Http\Controllers\TestController::class, 'hend'])->name('hend');
 
+Route::get('/jend',[\App\Http\Controllers\TestController::class, 'jend']);
+Route::post('/jend',[\App\Http\Controllers\TestController::class, 'jend'])->name('jend');
+
+Route::get('/axios',[\App\Http\Controllers\TestController::class, 'axios']);
+Route::post('/axios',[\App\Http\Controllers\TestController::class, 'axios'])->name('axios');
+
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
